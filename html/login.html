@@ -3,10 +3,14 @@
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 <body>
     <form>
-        <h1>Entrar</h1>
+        <div class="title-container">
+            <div><img src="https://cdn.pixabay.com/photo/2016/10/27/09/35/book-1773756_1280.png"></div>
+            <div><h1>Entrar</h1></div>
+        </div>
         <div>
             <label>E-mail</label><br>
             <input type="email" name="email" placeholder="seu@email.com">
@@ -14,11 +18,14 @@
         <div>
             <label>Senha</label><br>
             <input type="password" name="password" placeholder="senha"></br>
-            <button type="submit" name="forget-password">Esqueci minha senha</button>
+            <button type="submit" name="forget-password" class="clear"
+                >Esqueci minha senha</button>
         </div>
         <div>
-            <button type="submit" name="login">Entrar</button>
-            <button type="submit" name="register">Cadastrar</button>
+            <button type="submit" name="login" class="solid">Entrar</button>
+        </div>
+        <div>
+            <button type="submit" name="register" class="outline">Registrar</button>
         </div>
     </form>
 </body>
