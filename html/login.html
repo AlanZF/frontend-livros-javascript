@@ -13,20 +13,50 @@
         </div>
         <div>
             <label>E-mail</label><br>
-            <input type="email" name="email" placeholder="seu@email.com">
+            <input type="email" name="email" onChange="validateFiels()" placeholder="seu@email.com">
         </div>
         <div>
             <label>Senha</label><br>
-            <input type="password" name="password" placeholder="senha"></br>
-            <button type="submit" name="forget-password" class="clear"
+            <input type="password" name="password" onChange="validateFiels()" placeholder="senha"></br>
+            <button type="submit" name="forget-password" id="recover-password" class="clear" disabled="true"
                 >Esqueci minha senha</button>
         </div>
         <div>
-            <button type="submit" name="login" class="solid">Entrar</button>
+            <button type="submit" name="login" id="login-button" class="solid" disabled="true">Entrar</button>
         </div>
         <div>
             <button type="submit" name="register" class="outline">Registrar</button>
         </div>
     </form>
 </body>
+
+<script>
+
+    validateFields = () => {
+        const validEmail = isValidEmail()
+        document.getElementById("login-button").disabled = !validEmail
+        
+        const validPassword = isValidPassword()
+        document.getElementById("recover-password").disabled = !validPassword
+    }
+
+    isValidPassword = () => {
+        const password = document.getElementById("recover-password").value
+        if(!password) {
+            return false;
+        }
+        return true;
+    }
+
+    isValidEmail = () => {
+        const email = document.getElementById("login-button").value
+        if(!email) {
+            return false;
+        } 
+        return validatedEmail(email)
+    }
+
+    // test realiza busca pelo padrão (regex) retornando true ou false
+    validatedEmail = email => /\S+@\S+\.\S+/.test(email)
+</script>
 </html>
