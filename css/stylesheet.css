@@ -1,5 +1,5 @@
 body {
-    background: rgb(222, 93, 93);
+    background: rgb(55, 132, 151);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +39,7 @@ button:disabled {
     background: transparent;
     border: none;
     color: rgb(128, 128, 128);
+    margin-top: 30px;
 }
 .solid {
     background: rgb(100, 149, 237);
@@ -49,4 +50,11 @@ button:disabled {
     background: transparent;
     color: rgb(231, 76, 60);
     border: 2px solid rgb(231, 76, 60);
+}
+
+.error {
+    color: white;
+    background: red;
+    opacity: 0.5;
+    display: none;
 }
